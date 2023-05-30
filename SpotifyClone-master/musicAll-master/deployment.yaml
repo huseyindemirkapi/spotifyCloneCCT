@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: springbootapp
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: springbootapp
+  template:
+    metadata:
+      labels:
+        app: springbootapp
+    spec:
+      containers:
+        - name: spotifyapp-springboot-container
+          image: spotify-clone-huseyin
+          ports:
+            - containerPort: 8080
+          env:
+            - name: SPRING_DATASOURCE_URL
+              value: jdbc:postgresql://postgres-service:5432/Spotify
+            - name: postgres

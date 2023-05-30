@@ -1,0 +1,3 @@
+com\example\musicAll\MusicAllApplicationTests.class
+com\example\musicAll\controller\UserControllerSignupTest.class
+com\example\musicAll\controller\UserControllerLoginTest.class
